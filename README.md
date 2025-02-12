@@ -12,13 +12,6 @@ Get real-time bus arrival information for specific bus stops.
 - `busStopCode` (string, required): The unique 5-digit bus stop code
 - `serviceNo` (string, optional): Specific bus service number to filter results
 
-### traffic_images
-
-Access real-time traffic camera images from expressways and checkpoints.
-
-**Inputs:**
-- `cameraId` (string, optional): Specific camera ID to filter results
-
 ### station_crowding
 
 Get real-time crowding levels at MRT/LRT stations (Updates every 10 minutes).

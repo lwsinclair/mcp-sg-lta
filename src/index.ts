@@ -65,19 +65,6 @@ export class LTAServer {
           }
         },
         {
-          name: "traffic_images",
-          description: "Get real-time traffic camera images from expressways and checkpoints across Singapore.",
-          inputSchema: {
-            type: "object",
-            properties: {
-              cameraId: {
-                type: "string",
-                description: "Optional camera ID to get a specific camera's image"
-              }
-            }
-          }
-        },
-        {
           name: "station_crowding",
           description: "Get real-time MRT/LRT station crowdedness level for a particular train network line. Updates every 10 minutes.",
           inputSchema: {
@@ -174,44 +161,6 @@ export class LTAServer {
               return {
                 content: [{
                   type: "text", 
-                  text: `LTA API error: ${error.response?.data?.Message ?? error.message}`
-                }],
-                isError: true
-              };
-            }
-            throw error;
-          }
-        }
-
-        case "traffic_images": {
-          const { cameraId } = request.params.arguments as {
-            cameraId?: string;
-          };
-
-          try {
-            const response = await axios.get('https://datamall2.mytransport.sg/ltaodataservice/Traffic-Imagesv2', {
-              headers: {
-                'AccountKey': process.env.LTA_API_KEY!,
-                'accept': 'application/json'
-              }
-            });
-
-            let data = response.data;
-            if (cameraId) {
-              data.value = data.value.filter((camera: any) => camera.CameraID === cameraId);
-            }
-
-            return {
-              content: [{
-                type: "text",
-                text: JSON.stringify(data, null, 2)
-              }]
-            };
-          } catch (error) {
-            if (axios.isAxiosError(error)) {
-              return {
-                content: [{
-                  type: "text",
                   text: `LTA API error: ${error.response?.data?.Message ?? error.message}`
                 }],
                 isError: true
