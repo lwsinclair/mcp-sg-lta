@@ -119,7 +119,7 @@ export class LTAServer {
             properties: {
               trainLine: {
                 type: "string",
-                description: "Code of train network line",
+                description: "Code of train network line (CCL, CEL, CGL, DTL, EWL, NEL, NSL, BPL, SLRT, PLRT, TEL)",
                 enum: ["CCL", "CEL", "CGL", "DTL", "EWL", "NEL", "NSL", "BPL", "SLRT", "PLRT", "TEL"]
               }
             },
