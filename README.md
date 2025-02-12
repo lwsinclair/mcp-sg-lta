@@ -1,6 +1,15 @@
 # Singapore LTA MCP Server
+[![smithery badge](https://smithery.ai/badge/@arjunkmrm/mcp-sg-lta)](https://smithery.ai/server/@arjunkmrm/mcp-sg-lta)
 
 An MCP server for Singapore's Land Transport Authority (LTA) DataMall API, providing real-time access to transportation information including bus arrivals, traffic conditions, and train service updates.
+
+### Installing via Smithery
+
+To install Singapore LTA MCP Server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@arjunkmrm/mcp-sg-lta):
+
+```bash
+npx -y @smithery/cli install @arjunkmrm/mcp-sg-lta --client claude
+```
 
 ## Tools
 
