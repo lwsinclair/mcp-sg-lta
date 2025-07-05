@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/arjunkmrm-mcp-sg-lta-badge.png)](https://mseep.ai/app/arjunkmrm-mcp-sg-lta)
+
 # Singapore LTA MCP Server
 [![smithery badge](https://smithery.ai/badge/@arjunkmrm/mcp-sg-lta)](https://smithery.ai/server/@arjunkmrm/mcp-sg-lta)
 
